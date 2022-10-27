@@ -8,13 +8,26 @@
     --base-color: 194;
     --card-color1: hsla(var(--base-color), 97%, 31%, 1);
     --card-color2: hsla(var(--base-color),  0%, 86%, 1);
+    --card-color3: hsla(var(--base-color),  6%, 17%, 1);
     --text-color1: hsla(var(--base-color),  0%, 10%, 1);
     --text-color2: hsla(var(--base-color),  0%,100%, 1);
 
     font-size: 62.5%;
 }
+header button{
+    position: absolute;
+    right: 8.4rem;
+    top: 8.4rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.themeDark {
+    background-color: #121214 !important;
+    color: white !important;
+}
 body {
-    background: white;
+    background: white; 
     color: var(--text-color1);
     font-family: 'Roboto', sans-serif;
     font-size: 12.6rem;
@@ -31,7 +44,10 @@ body {
     background-color: transparent;
     border: none;
     cursor: pointer;
-}
+    }
+main button svg > path {
+        fill: var(--text-color1);
+      }
 .hide {
     display: none;
 }
@@ -40,6 +56,15 @@ body {
     display: flex;
     gap: 3.2rem;
     margin-bottom: 3.2rem;
+}
+.cardWoods,.cardRain,.cardCafeteria,.cardCampfire {
+    position: relative;
+}
+input {
+    position:absolute;
+    left: 1.7rem;
+    bottom: 1rem;
+
 }
 .cards button {
     background: var(--card-color2);

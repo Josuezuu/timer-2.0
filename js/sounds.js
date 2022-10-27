@@ -9,8 +9,9 @@ const audio =[ new Audio("./sounds/Floresta.mp3"), new Audio("./sounds/Chuva.mp3
 function play(currentAudio) {
  
     currentAudio.play();
-    currentAudio.loop = true;           
-}        
+    currentAudio.loop = true;
+    }           
+       
 
 function Stop(currentAudio) {
 
@@ -21,11 +22,12 @@ function Stop(currentAudio) {
 
 
 
+
 return {
     play,
     Stop,
     audio
 }
+
+
 }
-
-
