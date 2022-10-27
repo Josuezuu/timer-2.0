@@ -8,10 +8,26 @@ import {
     buttonSoundRain,
     buttonSoundCafeteria,
     buttonSoundCampfire,
-    minutesDisplay
+    minutesDisplay,
+    buttonDarkMode,
+    buttonLightMode,
+    themeDarkMode,
+    svgColor
 } from "./elements.js"
 
 export default function Events(timer,soundClass){
+
+    function changeTheme(){
+        buttonDarkMode.classList.toggle('hide')
+        buttonLightMode.classList.toggle('hide')
+        themeDarkMode.classList.toggle('themeDark')
+        themeDarkMode.className === 'themeDark' ? svgColor.style.fill = "var(--text-color2)" : svgColor.style.fill = "var(--text-color1)"
+    }
+
+        buttonLightMode.addEventListener('click',() => changeTheme()) 
+        buttonDarkMode.addEventListener('click',() => changeTheme()) 
+
+
 
 buttonPlay.addEventListener('click', function() {
     timer.playClock()
@@ -54,6 +70,8 @@ buttonSubtractMinutes.addEventListener('click', function() {
         buttonSoundCampfire.className === 'campfire' ? soundClass.Stop(soundClass.audio[2]) : soundClass.play(soundClass.audio[2])
         })
         
-        
+     
+
 
     }
+    
