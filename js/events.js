@@ -12,16 +12,17 @@ import {
     buttonDarkMode,
     buttonLightMode,
     themeDarkMode,
-    svgColor
+    html,
+    volumeBar
 } from "./elements.js"
 
 export default function Events(timer,soundClass){
-
+    
     function changeTheme(){
         buttonDarkMode.classList.toggle('hide')
         buttonLightMode.classList.toggle('hide')
         themeDarkMode.classList.toggle('themeDark')
-        themeDarkMode.className === 'themeDark' ? svgColor.style.fill = "var(--text-color2)" : svgColor.style.fill = "var(--text-color1)"
+        html.classList.toggle('dark-mode')
     }
 
         buttonLightMode.addEventListener('click',() => changeTheme()) 
@@ -56,7 +57,7 @@ buttonSubtractMinutes.addEventListener('click', function() {
     buttonSoundWoods.addEventListener('click',function(){
         buttonSoundWoods.classList.toggle('active')   
         buttonSoundWoods.className === 'woods' ? soundClass.Stop(soundClass.audio[0]) : soundClass.play(soundClass.audio[0])
-        })    
+    })    
     buttonSoundRain.addEventListener('click',function(){
         buttonSoundRain.classList.toggle('active')
         buttonSoundRain.className === 'rain' ? soundClass.Stop(soundClass.audio[1]) : soundClass.play(soundClass.audio[1])
@@ -64,13 +65,14 @@ buttonSubtractMinutes.addEventListener('click', function() {
     buttonSoundCafeteria.addEventListener('click',function(){
         buttonSoundCafeteria.classList.toggle('active')
         buttonSoundCafeteria.className === 'cafeteria' ? soundClass.Stop(soundClass.audio[3]) : soundClass.play(soundClass.audio[3])
+        console.log(volumeBar[2])
         })
     buttonSoundCampfire.addEventListener('click',function(){
         buttonSoundCampfire.classList.toggle('active')
         buttonSoundCampfire.className === 'campfire' ? soundClass.Stop(soundClass.audio[2]) : soundClass.play(soundClass.audio[2])
         })
-        
-     
+
+
 
 
     }
