@@ -12,7 +12,8 @@ const secondsDisplay = document.querySelector('.seconds')
 const buttonDarkMode = document.querySelector('.darkMode')
 const buttonLightMode = document.querySelector('.lightMode')
 const themeDarkMode = document.querySelector('#Dark')
-const svgColor = document.querySelector('svg.butn path')
+const html = document.querySelector('html')
+const volumeBar = document.querySelectorAll('.volume')
 
 export {
     buttonPlay,
@@ -29,5 +30,6 @@ export {
     buttonDarkMode,
     buttonLightMode,
     themeDarkMode,
-    svgColor,
+    volumeBar,
+    html
 }
